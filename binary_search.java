@@ -17,12 +17,12 @@ class binary_search
         while(low<=up)
         {
            mid=(low+up)/2;
-           if(a[mid]==x);
+           if(a[mid]==x)
            {flag=1;
         break;}
            else if(a[mid]>x)
            {up = mid-1;}
-           else(a[mid]<x)
+           else
            {
                low=mid+1;
            }

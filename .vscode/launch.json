@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "CodeLens (Launch) - binary_s",
+            "request": "launch",
+            "mainClass": "binary_s",
+            "projectName": "dsalgo__f559e5c3"
+        },
+        {
+            "type": "java",
             "name": "Debug (Launch) - Current File",
             "request": "launch",
             "mainClass": "${file}"
