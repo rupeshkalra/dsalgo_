@@ -12,13 +12,11 @@ public class duplicate_hashset
          {
              a[i]=sc.nextInt();
          }
-         sc.close();
+        sc.close();
         Set<Integer> hash = new HashSet<Integer>();
-         
         for(int i=0;i<n;i++) 
         {
-     
-            if(hash.add(a[i]) == false) 
+           if(hash.add(a[i]) == false) 
             {
                 System.out.println("duplicate "+a[i]);
             }
