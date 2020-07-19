@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "CodeLens (Launch) - duplicate_hashset",
+            "request": "launch",
+            "mainClass": "duplicate_hashset",
+            "projectName": "dsalgo__f559e5c3"
+        },
+        {
+            "type": "java",
             "name": "CodeLens (Launch) - binary_s",
             "request": "launch",
             "mainClass": "binary_s",
