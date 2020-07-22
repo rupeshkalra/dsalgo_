@@ -2,7 +2,7 @@ import java.util.*;
 
 class linkedlist_endinsert
 {
-    static class Node
+    class Node
     {
     int data;
     Node next;
@@ -37,7 +37,7 @@ class linkedlist_endinsert
       {
           System.out.print("empty");
       }
-      else{
+      else{System.out.println("elements are:");
           while(curr !=null)
           {
               System.out.print(curr.data+ " ");
