@@ -46,18 +46,21 @@ class ll_withtail_reverse
    }
    public void reverse()
    { 
-    Node curr=head;
-    Node prev=null;
-    Node next=null;
-       do
-    {next = curr.next; 
-    curr.next = prev; 
-    prev = curr; 
-    curr = next;}
-    while(curr!=head);
-    tail=head;
-    head=prev; 
-    tail.next=head;
+      Node curr=head;
+      Node prev=null;
+      Node next=null;
+      do
+      { 
+        next = curr.next; 
+        curr.next = prev; 
+        prev = curr; 
+        curr = next;
+      }
+      while(curr!=head);
+      
+      tail=head;
+      head=prev; 
+      tail.next=head;
    }
     public static void main(String args[])
     {

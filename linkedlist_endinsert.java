@@ -2,60 +2,55 @@ import java.util.*;
 
 class linkedlist_endinsert
 {
-    class Node
-    {
-    int data;
-    Node next;
-    Node(int d)
-    {
-        data =d;
-        next=null;
-    }
-    }
-    public Node head =null;
-   public void insert(int d)
-   {
-      Node ele =new Node(d);
-      if(head==null)
-      {
-      head =ele;
-      }
-      else{
-          Node last =head;
-          while(last.next!=null)
-          {
-              last=last.next;
-          }
-          last.next=ele;
-      }
+    Node head;
 
-   }
-   public void disp()
-   {
-      Node curr =head;
-      if(curr==null)
-      {
-          System.out.print("empty");
-      }
-      else{System.out.println("elements are:");
-          while(curr !=null)
-          {
-              System.out.print(curr.data+ " ");
-              curr=curr.next;
-          }
-      }
-   }
-    public static void main(String args[])
-    {
-        Scanner sc=new Scanner(System.in);
-        int n=sc.nextInt();
-        linkedlist_endinsert in =new linkedlist_endinsert();
-        for(int i=0;i<n;i++)
+    class Node{
+        int data;
+        Node next;
+        Node(int d)
         {
-          int ele=sc.nextInt();
-          in.insert(ele);
+            data=d;
+            next=null;
         }
-        sc.close();
-        in.disp();
+    }
+
+    void push(int e)
+    {
+        Node n=new Node(e);
+        if(head==null)
+        {
+            head=n;
+        }
+        else{
+        Node curr=head;
+        while(curr.next!=null)
+        {
+            curr=curr.next;
+        }
+        curr.next=n;
+    }
+    }
+    void disp()
+    {
+        Node curr=head;
+        while(curr.next!=null)
+        {
+            System.out.print(curr.data+" ");
+            curr=curr.next;
+        }
+        System.out.print(curr.data);
+    }
+       public static void main(String args[])
+    {
+      Scanner sc=new Scanner(System.in);
+      int n=sc.nextInt();
+      linkedlist_endinsert ll=new linkedlist_endinsert();
+      for(int i=0;i<n;i++)
+      {
+            int a=sc.nextInt();
+            ll.push(a);
+      }
+      sc.close();
+      ll.disp();
     }
 }
